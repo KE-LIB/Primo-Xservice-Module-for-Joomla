@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5.0" client="site" method="upgrade">
+	<name>MOD_PRIMOXS</name>
+	<creationDate>2016</creationDate>
+	<author>G. Péter Kátai (Univeristy Kaposvár - University Libraray)</author>
+	<authorEmail>kataigp@gmail.com</authorEmail>
+	<authorUrl>http://lib.ke.hu</authorUrl>
+	<version>0.0.1</version>
+	<description>MOD_PRIMOXS_DESCRIPTION</description>
+	<languages>
+        <language tag="hu-HU">language/hu-HU/hu-HU.mod_primoxs.ini</language>
+        <language tag="hu-HU">language/hu-HU/hu-HU.mod_primoxs.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_primoxs.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_primoxs.sys.ini</language>
+    </languages>
+	<files >
+		<filename module="mod_primoxs">mod_primoxs.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+        <folder>tmpl</folder>
+		<filename>mod_primoxs.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="radio" name="facetmode" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_FACETMODE_ENABLE" description="PRIMOXS_FACETMODE_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="host" type="text" label="PRIMOXS_HOST_LABEL" description="PRIMOXS_HOST_DESC"/>
+				<field name="inst" type="text" label="PRIMOXS_INST_LABEL" description="PRIMOXS_INST_DESC"/>
+				<field name="bulksize" type="text" label="PRIMOXS_BULKSIZE_LABEL" description="PRIMOXS_BULKSIZE_DESC"/>
+				<field type="radio" name="sorting" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_SORTING_ENABLE" description="PRIMOXS_SORTING_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="defsort" type="list" default="0" label="PRIMOXS_SORTING_DEFAULT" description="PRIMOXS_SORTING_DEFAULT_DESC">
+					<option value="stitle">PRIMOXS_SEARCH_FILTER_STITLE</option>
+					<option value="relevance">PRIMOXS_SEARCH_FILTER_RELEVANCE</option>
+					<option value="popularity">PRIMOXS_SEARCH_FILTER_POPULARITY</option>
+					<option value="screator">PRIMOXS_SEARCH_FILTER_SCREATOR</option>
+					<option value="scdate">PRIMOXS_SEARCH_FILTER_SCDATE</option>
+				</field>
+				<field type="radio" name="titleurl" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_TITLEURL_ENABLE" description="PRIMOXS_TITLEURL_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="opacurl" type="text" label="PRIMOXS_OPACURL_LABEL" description="PRIMOXS_OPACURL_DESC"/>
+				<field name="itemurl" type="text" label="PRIMOXS_ITEMURL_LABEL" description="PRIMOXS_ITEMURL_DESC"/>
+				<field type="radio" name="details" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_DETAILS_ENABLE" description="PRIMOXS_DETAILS_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="radio" name="status" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_STATUS_ENABLE" description="PRIMOXS_STATUS_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="radio" name="rownum" class="btn-group btn-group-yesno" default="1" label="PRIMOXS_ROWNUM_ENABLE" description="PRIMOXS_ROWNUM_ENABLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="pagenum" type="text" label="PRIMOXS_PAGENUM_LABEL" description="PRIMOXS_PAGENUM_DESC" />
+				<field name="nlcolls" type="text" label="PRIMOXS_NLCOLLS_LABEL" description="PRIMOXS_NLCOLLS_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>  
